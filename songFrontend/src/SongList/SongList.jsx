@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSongs } from "../../actions/songActions";
+import { fetchSongsRequest } from "../actions/songActions";
 
 const SongList = () => {
   const dispatch = useDispatch();
   const songs = useSelector((state) => state.songs);
 
   useEffect(() => {
-    dispatch(fetchSongs());
+    dispatch(fetchSongsRequest());
   }, [dispatch]);
 
   return (

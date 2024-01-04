@@ -1,7 +1,6 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import createSagaMiddleware from "redux-saga";
+import { createStore, combineReducers } from "redux";
 import songReducer from "./reducers/songReducer";
-import rootSaga from "./sagas/rootSaga";
+
 export {
   FETCH_SONGS_REQUEST,
   FETCH_SONGS_SUCCESS,
@@ -26,13 +25,7 @@ const rootReducer = combineReducers({
   // Add other reducers here if needed
 });
 
-// Create saga middleware
-const sagaMiddleware = createSagaMiddleware();
-
-// Create the Redux store with middleware
-const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
-
-// Run the root saga if using sagas
-sagaMiddleware.run(rootSaga);
+// Create the Redux store
+const store = createStore(rootReducer);
 
 export default store;

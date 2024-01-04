@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/Footer";
-import SongForm from "./SongForm";
-import { updateSong, removeSong } from "../../../actions/songActions";
+import SongForm from "../components/SongForm";
+import { updateSongRequest, removeSongRequest } from "../actions/songActions";
 
 const SongDetails = () => {
   const { songId } = useParams();
@@ -14,12 +14,12 @@ const SongDetails = () => {
 
   const handleUpdate = (updatedSong) => {
     // Dispatch an action to update the song
-    dispatch(updateSong(updatedSong));
+    dispatch(updateSongRequest(updatedSong));
   };
 
   const handleRemove = () => {
     // Dispatch an action to remove the song
-    dispatch(removeSong(songId));
+    dispatch(removeSongRequest(songId));
   };
 
   if (!song) {

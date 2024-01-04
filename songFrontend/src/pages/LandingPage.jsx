@@ -1,6 +1,6 @@
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
-import SongList from "../../components/SongList/SongList";
+import Navbar from "../Navbar/navbar";
+import Footer from "../Footer/Footer";
+import SongList from "../SongList/SongList";
 
 const LandingPage = () => {
   return (

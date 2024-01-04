@@ -1,7 +1,7 @@
 // src/components/SongForm.js
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addSong } from "../../actions/songActions";
+import { addSongRequest } from "../actions/songActions";
 
 const SongForm = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const SongForm = () => {
     e.preventDefault();
 
     // Dispatch an action to add a new song
-    dispatch(addSong({ title }));
+    dispatch(addSongRequest({ title }));
 
     // Clear the input field after submitting
     setTitle("");
