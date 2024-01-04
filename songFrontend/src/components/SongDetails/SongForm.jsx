@@ -1,7 +1,7 @@
 // src/components/SongForm.js
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addSong } from "../actions/songActions";
+import { addSong } from "../../actions/songActions";
 
 const SongForm = () => {
   const dispatch = useDispatch();
